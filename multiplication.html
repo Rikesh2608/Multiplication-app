@@ -82,15 +82,20 @@
                     let c=a*b;
                     if(val==(c)){
                         document.querySelector('.refree').innerHTML=`Your Answer is Correct !!`;
-                        score++;
                         document.querySelector('#inp').value='';
+                        random_generator();
+                        score++;
                     }
                     else{
                         document.querySelector('.refree').innerHTML=`Your Answer is Wrong !!`;
                         score--;
+                        document.querySelector('#inp').value='';
+                    }
+                    if(score<=0){
+                        score=0;
                     }
                     document.querySelector('.score').innerHTML=`Score : ${score}`;
-                    random_generator();
+                    
                 }
                     
            }
